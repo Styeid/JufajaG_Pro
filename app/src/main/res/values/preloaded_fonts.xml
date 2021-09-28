@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/audiowide</item>
+        <item>@font/bangers</item>
         <item>@font/michroma</item>
         <item>@font/syncopate_bold</item>
     </array>

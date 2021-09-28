@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "404662228425",
+    "project_id": "jufajag-pro",
+    "storage_bucket": "jufajag-pro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404662228425:android:712dd7cc6e38f6744a4418",
+        "android_client_info": {
+          "package_name": "com.jufaja.jufajag_pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404662228425-u18l4r0534ag94mkt37i2ls5gieu9qq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmXCMXRnK1-Q_PDF1-DrLNoFppjJ9XKqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404662228425-u18l4r0534ag94mkt37i2ls5gieu9qq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,40 +7,116 @@
     android:background="@drawable/backsplash007"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <TextView
+        android:id="@+id/tvHomeLogo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="67dp"
+        android:fontFamily="@font/audiowide"
+        android:text="JuFaJa@rid.com"
+        android:textColor="#E91E63"
+        android:textSize="70sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvHomeLogo1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/audiowide"
-        android:text="J u F a J a  Grid"
-        android:textColor="#E91E63"
-        android:textSize="70sp"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
-        app:layout_constraintEnd_toEndOf="@+id/recyclerView"
-        app:layout_constraintHorizontal_bias="0.37"
-        app:layout_constraintStart_toStartOf="@+id/recyclerView"
-        app:layout_constraintTop_toTopOf="@+id/recyclerView" />
-
-    <TextView
         android:id="@+id/tvHomeLogo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="600dp"
-        android:layout_marginTop="60dp"
-        android:text="Pro"
+        android:layout_marginStart="540dp"
+        android:layout_marginTop="54dp"
+        android:text="Pro###"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="@+id/tvHomeLogo1"
         app:layout_constraintTop_toTopOf="@+id/tvHomeLogo1" />
+
+    <Button
+        android:id="@+id/btnStartGame"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:fontFamily="@font/bangers"
+        android:text="Start"
+        android:textColor="#FFC107"
+        android:textSize="47sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvHomeLogo1"
+        app:layout_constraintStart_toStartOf="@+id/tvHomeLogo1"
+        app:layout_constraintTop_toTopOf="@+id/tvHomeLogo1" />
+
+    <EditText
+        android:id="@+id/etNick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:ems="9"
+        android:fontFamily="@font/bangers"
+        android:hint="Enter your Nick-name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="?attr/colorControlNormal"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvHomeLogo1"
+        app:layout_constraintStart_toStartOf="@+id/tvHomeLogo1"
+        app:layout_constraintTop_toTopOf="@+id/tvHomeLogo1" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColorHint="#80EBEBEB"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.672" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#80EBEBEB"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etNick2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:hint="Nickname"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="#80EBEBEB"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
