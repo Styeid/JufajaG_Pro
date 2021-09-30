@@ -4,5 +4,4 @@
     <item
         android:id="@+id/restartGame"
         android:title="Restart" />
-    <item android:title="Item" />
 </menu>

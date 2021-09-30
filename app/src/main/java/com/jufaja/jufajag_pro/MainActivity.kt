@@ -14,11 +14,12 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.title = "MAIN"
 
         val auth = FirebaseAuth.getInstance()
 
             if (auth.currentUser != null ) {
-                goGameActivity()
+                goJufajaActivity()
             }
         btnStartGame.setOnClickListener {
             btnStartGame.isEnabled = false
@@ -37,7 +38,7 @@ open class MainActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         btnStartGame.isEnabled = false
                         Toast.makeText(this, "$nickName Success!", Toast.LENGTH_LONG).show()
-                        goGameActivity()
+                        goJufajaActivity()
                     } else {
                         Log.e(TAG, "Starting game Failed", task.exception)
                         Toast.makeText(this, "Starting game Failed", Toast.LENGTH_LONG).show()
@@ -45,9 +46,9 @@ open class MainActivity : AppCompatActivity() {
                 }
         }
     }
-    private fun goGameActivity() {
-        Log.i(TAG, "goGameActivity")
-        val intent = Intent(this, GameActivity::class.java)
+    private fun goJufajaActivity() {
+        Log.i(TAG, "goJufajaActivity")
+        val intent = Intent(this, JufajaActivity::class.java)
         startActivity(intent)
         finish()
     }
