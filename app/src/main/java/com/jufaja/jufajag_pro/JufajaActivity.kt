@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.item_tils.*
 
 private const val TAG = "JufajaActivity"
 class JufajaActivity : AppCompatActivity() {
@@ -15,6 +16,7 @@ class JufajaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_jufaja)
         supportActionBar?.title = "JUFAJA"
+
     }
 
 
@@ -31,16 +33,18 @@ class JufajaActivity : AppCompatActivity() {
             Toast.makeText(this, "Restarting", Toast.LENGTH_LONG).show()
             startActivity(Intent(this, MainActivity::class.java))
         }
-        if (item.itemId == R.id.rvTils) {
+        if (item.itemId == R.id.rvBase) {
             Log.i(TAG, "Constructor mode")
             val intent = (Intent(this, GameActivity::class.java))
             finish()
             Toast.makeText(this, "Constructor mode", Toast.LENGTH_LONG).show()
             startActivity(intent)
-
         }
-        return super.onOptionsItemSelected(item)
+
+            return super.onOptionsItemSelected(item)
     }
 
 }
+
+
 

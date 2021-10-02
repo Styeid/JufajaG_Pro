@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_tils.*
 
 private const val TAG = "MainActivity"
 open class MainActivity : AppCompatActivity() {

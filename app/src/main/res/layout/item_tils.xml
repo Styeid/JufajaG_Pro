@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rvBase"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    app:cardBackgroundColor="#464646">
+
+
+    <LinearLayout
+        android:id="@+id/lyItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#434343"
+        android:orientation="vertical" />
+
+    <ImageView
+        android:id="@+id/tileImage"
+        android:layout_width="339dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="fitStart"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/txDataX"
+        android:layout_width="85dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txCodeX"
+            android:layout_width="50dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/coda"
+            android:text="Code:"
+            android:textAlignment="textEnd"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txIdX"
+            android:layout_width="50dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/coda"
+            android:text="Id:"
+            android:textAlignment="textEnd"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txDataY"
+        android:layout_width="85dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txNickX"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/coda"
+            android:text="Nick:"
+            android:textAlignment="textEnd"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txValueX"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/coda"
+            android:text="Value:"
+            android:textAlignment="textEnd"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txXData"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="7dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/coda"
+            android:textAlignment="center"
+            android:textColor="#C8C8C8"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="E3" />
+
+        <TextView
+            android:id="@+id/txId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/coda"
+            android:textAlignment="center"
+            android:textColor="#C8C8C8"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="4-1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txYData"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="7dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txNick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/coda"
+            android:textAlignment="center"
+            android:textColor="#C8C8C8"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Pro###" />
+
+        <TextView
+            android:id="@+id/txValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/coda"
+            android:textAlignment="center"
+            android:textColor="#C8C8C8"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="3" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
