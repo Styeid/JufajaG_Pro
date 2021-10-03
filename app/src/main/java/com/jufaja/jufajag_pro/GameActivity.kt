@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.item_tils.*
 
 
 private const val TAG = "GameActivity"
-private const val EXTRA_NICKNAME = "EXTRA_NICKNAME"
+const val EXTRA_NICKNAME = "EXTRA_NICKNAME"
 open class GameActivity : AppCompatActivity() {
 
     private var signInNick: User? = null
@@ -41,11 +41,11 @@ open class GameActivity : AppCompatActivity() {
 
         //>>>>>>>
         firebaseDb = FirebaseFirestore.getInstance()
-
+        //>>>>>>> REQUEST SIGNIN USER <<<<<<<
         firebaseDb.collection("user")
             .document(FirebaseAuth.getInstance().currentUser?.uid as String)
             .get()
-            .addOnSuccessListener {userSnapshot ->
+            .addOnSuccessListener { userSnapshot ->
                 signInNick = userSnapshot.toObject(User::class.java)
                 Log.i(TAG, "signed in User: $signInNick")
 
@@ -58,7 +58,7 @@ open class GameActivity : AppCompatActivity() {
         var tilsReference = firebaseDb
             .collection("tils")
             .limit(54)
-            .orderBy("id", Query.Direction.ASCENDING)
+            .orderBy("number", Query.Direction.ASCENDING)
         //>>>>>>> FILTERING TILS-PROJECTS <<<<<<<
         val nickname = (intent.getStringExtra(EXTRA_NICKNAME))
         if (nickname != null) {
@@ -79,8 +79,13 @@ open class GameActivity : AppCompatActivity() {
             for (tils in tilsList)
                 Log.i(TAG, "DOKU $tils")
             }
+            fabCreate.setOnClickListener {
+                val intent = Intent(this, AddtileActivity::class.java)
+                startActivity(intent)
+            }
+        }
 
-    }
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_game, menu)
@@ -95,13 +100,13 @@ open class GameActivity : AppCompatActivity() {
             Toast.makeText(this, "Restarting 'Constructor'", Toast.LENGTH_LONG).show()
             startActivity(Intent(this, MainActivity::class.java))
         }
-        if (item.itemId == R.id.addTile) {
-            Log.i(TAG, "Go to add tile 'Constructor'")
-            val intent = (Intent(this, AddtileActivity::class.java))
-            finish()
-            Toast.makeText(this, "Add tile 'Constructor'", Toast.LENGTH_LONG).show()
-            startActivity(intent)
-        }
+        //if (item.itemId == R.id.addTile) {
+        //    Log.i(TAG, "Go to add tile 'Constructor'")
+        //    val intent = (Intent(this, AddtileActivity::class.java))
+        //    finish()
+        //    Toast.makeText(this, "Add tile 'Constructor'", Toast.LENGTH_LONG).show()
+        //    startActivity(intent)
+        //}
         if (item.itemId == R.id.profile) {
             Log.i(TAG, "Go to profile Base 'Constructor'")
             val intent = (Intent(this, ProfileActivity::class.java))

@@ -31,6 +31,7 @@ class TilsAdapter( val context: Context, val tils: List<Tils>) :
             itemView.txCode.text = tils.code
             itemView.txId.text = tils.id
             itemView.txValue.text = tils.value.toString()
+            itemView.txNo.text = tils.number.toString()
             Glide.with(context).load(tils.imageUrl).into(itemView.tileImage)
 
         }

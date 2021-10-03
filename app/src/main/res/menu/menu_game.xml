@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/addTile"
-        android:title="Add Tile" />
+        android:title="Add Tile"
+        android:visible="false" />
     <item
         android:id="@+id/profile"
         android:title="P.Base" />

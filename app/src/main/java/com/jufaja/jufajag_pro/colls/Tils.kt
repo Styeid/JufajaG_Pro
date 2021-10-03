@@ -3,7 +3,8 @@ package com.jufaja.jufajag_pro.colls
 data class Tils(
     var id: String = "",
     var imageUrl: String = "",
-    var user: User? = null,
+    var code: String = "",
     var value: Int = 0,
-    var code: String = ""
+    var number: Int = 0,
+    var user: User? = null,
 )
