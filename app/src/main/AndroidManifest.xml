@@ -18,9 +18,6 @@
             android:name=".AddtileActivity"
             android:exported="true" />
         <activity
-            android:name=".BaseActivity"
-            android:exported="true" />
-        <activity
             android:name=".JufajaActivity"
             android:exported="true" />
         <activity

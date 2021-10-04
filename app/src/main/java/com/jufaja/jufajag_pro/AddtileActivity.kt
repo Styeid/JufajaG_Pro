@@ -79,44 +79,82 @@ class AddtileActivity : AppCompatActivity() {
             return
         }
         //>>>>>>> Building tile(+data/info), store in firebase and return tile-build to (p.)Base
-        //>>>>>>>
 
-        //>>>>>>>
         btnSubmit.isEnabled = false
         val tileUploadUri = tileUri as Uri
-        val tileReference = storageReference.child("tilss/${System.currentTimeMillis()}-TILE")
-        tileReference.putFile(tileUploadUri)
-            .continueWith { tileUriUploadTask ->
-            Log.i(TAG, "uploaded bytes: ${tileUriUploadTask.result?.bytesTransferred}")
-                tileReference.downloadUrl
-            }.continueWith { downloadUrlTask ->
-                val addTils = Tils(
+        val photoReference = storageReference.child("images/${System.currentTimeMillis()}-photo.jpg")
+
+        // Upload photo to Firebase storage
+
+        photoReference.putFile(tileUploadUri)
+            .continueWithTask { photoUploadTask ->
+                Log.i(TAG, "uploaded bytes: ${photoUploadTask.result?.bytesTransferred}")
+
+
+                // Retrieve image Url of the uploaded image
+
+                photoReference.downloadUrl
+            }.continueWithTask { downloadUrlTask ->
+
+
+                // Create a post object with the image Url and add that to the post collection
+
+                val post = Tils(
                     etId.text.toString(),
                     downloadUrlTask.result.toString(),
                     etCode.text.toString(),
                     etValue.text.toString().toInt(),
                     etNum.text.toString().toInt(),
                     signInNick)
-                firebaseDb.collection("tils").add(addTils)
-            }.addOnCompleteListener { tilsCreationTask ->
+                firebaseDb.collection("tils").add(post)
+            }.addOnCompleteListener { postCreatoinTask ->
                 btnSubmit.isEnabled = true
-                if (!tilsCreationTask.isSuccessful) {
-                    Log.e(TAG, "Exceptoin during Firebase operations", tilsCreationTask.exception)
-                    Toast.makeText(this, "Failed to save tile/image", Toast.LENGTH_LONG).show()
+                if (!postCreatoinTask.isSuccessful) {
+                    Log.e(TAG, "Exceptoin during Firebase operations", postCreatoinTask.exception)
+                    Toast.makeText(this, "Foto toevoegen mislukt", Toast.LENGTH_SHORT).show()
                 }
                 etId.text.clear()
                 ivImageUrli.setImageResource(0)
-                etCode.text.clear()
-                etValue.text.clear()
-                etNum.text.clear()
-                Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
-                val baseIntent = Intent(this, GameActivity::class.java)
-                baseIntent.putExtra(EXTRA_NICKNAME, signInNick?.nickname)
-                startActivity(baseIntent)
+                Toast.makeText(this, "Foto Toegevoegen OKE", Toast.LENGTH_SHORT).show()
+                val profileIntent = Intent(this, GameActivity::class.java)
+                profileIntent.putExtra(EXTRA_NICKNAME, signInNick?.nickname)
+                startActivity(profileIntent)
                 finish()
+        //>>>>>>>
+        //btnSubmit.isEnabled = false
+        //val tileUploadUri = tileUri as Uri
+        //val tileReference = storageReference.child("tilss/${System.currentTimeMillis()}-photo.jpg")
+        //tileReference.putFile(tileUploadUri)
+        //    .continueWith { tileUploadTask ->
+        //    Log.i(TAG, "uploaded bytes: ${tileUploadTask.result?.bytesTransferred}")
+        //        tileReference.downloadUrl
+        //    }.continueWith { downloadUrlTask ->
+        //        val addTils = Tils(
+        //            etId.text.toString(),
+        //            downloadUrlTask.result.toString(),
+        //           etCode.text.toString(),
+        //            etValue.text.toString().toInt(),
+        //            etNum.text.toString().toInt(),
+        //            signInNick)
+        //        firebaseDb.collection("tils").add(addTils)
+        //    }.addOnCompleteListener { tilsCreationTask ->
+        //        btnSubmit.isEnabled = true
+        //        if (!tilsCreationTask.isSuccessful) {
+        //            Log.e(TAG, "Exception during Firebase operations", tilsCreationTask.exception)
+        //            Toast.makeText(this, "Failed to save tile/image", Toast.LENGTH_LONG).show()
+        //       }
+        //        etId.text.clear()
+        //        ivImageUrli.setImageResource(0)
+        //        etCode.text.clear()
+        //        etValue.text.clear()
+        //        etNum.text.clear()
+        //       Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
+        //        val baseIntent = Intent(this, GameActivity::class.java)
+        //        baseIntent.putExtra(EXTRA_NICKNAME, signInNick?.nickname)
+        //        startActivity(baseIntent)
+        //        finish()
             }
-        }
-
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
