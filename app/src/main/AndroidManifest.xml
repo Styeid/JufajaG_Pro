@@ -19,7 +19,8 @@
             android:exported="true" />
         <activity
             android:name=".JufajaActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".GameActivity"
             android:exported="true" />

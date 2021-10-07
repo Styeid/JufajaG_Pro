@@ -2,7 +2,7 @@ package com.jufaja.jufajag_pro.colls
 
 import com.google.firebase.firestore.PropertyName
 
-data class Tils(
+data class Pils(
     var id: String = "",
     @get:PropertyName("image_url") @set:PropertyName("image_url") var imageUrl: String = "",
     var code: String = "",
