@@ -7,7 +7,7 @@
     tools:context=".GameActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvtTils"
+        android:id="@+id/rvPils"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#0A0A0A"
@@ -26,7 +26,7 @@
         android:layout_marginBottom="24dp"
         android:clickable="true"
         android:tint="@android:color/white"
-        app:backgroundTint="#80FFFFFF"
+        app:backgroundTint="#4DFFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_input_add" />

@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.jufaja.jufajag_pro.colls.Tils
+import com.jufaja.jufajag_pro.colls.Pils
 import kotlinx.android.synthetic.main.item_tils.view.*
 
-class TilsAdapter( val context: Context, val tils: List<Tils>) :
-    RecyclerView.Adapter<TilsAdapter.Viewholder>() {
+class PilsAdapter( val context: Context, val tils: List<Pils>) :
+    RecyclerView.Adapter<PilsAdapter.Viewholder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Viewholder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_tils, parent, false)
@@ -26,7 +26,7 @@ class TilsAdapter( val context: Context, val tils: List<Tils>) :
     }
 
     inner class Viewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(tils: Tils) {
+        fun bind(tils: Pils) {
             itemView.txNick.text = tils.user?.nickname
             itemView.txCode.text = tils.code
             itemView.txId.text = tils.id

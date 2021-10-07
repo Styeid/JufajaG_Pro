@@ -8,15 +8,18 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.api.Distribution
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import com.jufaja.jufajag_pro.colls.Tils
+import com.jufaja.jufajag_pro.colls.Pils
 import com.jufaja.jufajag_pro.colls.User
 import kotlinx.android.synthetic.main.activity_game.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_tils.*
+
 
 
 private const val TAG = "GameActivity"
@@ -25,8 +28,8 @@ open class GameActivity : AppCompatActivity() {
 
     private var signInNick: User? = null
     private lateinit var firebaseDb: FirebaseFirestore
-    private lateinit var tils: MutableList<Tils>
-    private lateinit var adapter: TilsAdapter
+    private lateinit var pils: MutableList<Pils>
+    private lateinit var adapter: PilsAdapter
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,10 +37,10 @@ open class GameActivity : AppCompatActivity() {
         setContentView(R.layout.activity_game)
         supportActionBar?.title = "Base"
         //>>>>>>>
-        tils = mutableListOf()
-        adapter = TilsAdapter(this, tils)
-        rvtTils.adapter = adapter
-        rvtTils.layoutManager = LinearLayoutManager(this)
+        pils = mutableListOf()
+        adapter = PilsAdapter(this, pils)
+        rvPils.adapter = adapter
+        rvPils.layoutManager = LinearLayoutManager(this)
 
         //>>>>>>>
         firebaseDb = FirebaseFirestore.getInstance()
@@ -72,9 +75,9 @@ open class GameActivity : AppCompatActivity() {
                 Log.e(TAG, "Failed to get tils", exeption)
                 return@addSnapshotListener
             }
-            val tilsList = snapshot.toObjects(Tils::class.java)
-            tils.clear()
-            tils.addAll(tilsList)
+            val tilsList = snapshot.toObjects(Pils::class.java)
+            pils.clear()
+            pils.addAll(tilsList)
             adapter.notifyDataSetChanged()
             for (tils in tilsList)
                 Log.i(TAG, "DOKU $tils")
@@ -84,7 +87,6 @@ open class GameActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -100,11 +102,11 @@ open class GameActivity : AppCompatActivity() {
             Toast.makeText(this, "Restarting 'Constructor'", Toast.LENGTH_LONG).show()
             startActivity(Intent(this, MainActivity::class.java))
         }
-        //if (item.itemId == R.id.addTile) {
-        //    Log.i(TAG, "Go to add tile 'Constructor'")
-        //    val intent = (Intent(this, AddtileActivity::class.java))
+        //if (item.itemId == R.id.RESERVE-RESERVE) {
+        //    Log.i(TAG, "LOG-LOG 'Constructor'")
+        //    val intent = (Intent(this, XX-XXActivity::class.java))
         //    finish()
-        //    Toast.makeText(this, "Add tile 'Constructor'", Toast.LENGTH_LONG).show()
+        //    Toast.makeText(this, "TEXT-TEXT 'Constructor'", Toast.LENGTH_LONG).show()
         //    startActivity(intent)
         //}
         if (item.itemId == R.id.profile) {
