@@ -8,5 +8,6 @@ data class Pils(
     var code: String = "",
     var value: Int = 0,
     var number: Int = 0,
+    var color: String = "",
     var user: User? = null,
 )

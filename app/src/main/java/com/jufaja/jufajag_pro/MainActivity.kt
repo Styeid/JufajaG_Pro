@@ -45,7 +45,7 @@ open class MainActivity : AppCompatActivity() {
                         Toast.makeText(this, "Starting game Failed", Toast.LENGTH_LONG).show()
                     }
                 }
-        }
+            }
     }
     private fun goJufajaActivity() {
         Log.i(TAG, "goJufajaActivity")

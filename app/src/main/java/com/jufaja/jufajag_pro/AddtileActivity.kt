@@ -58,9 +58,12 @@ class AddtileActivity : AppCompatActivity() {
 
         btnSubmit.setOnClickListener {
             handleSubmitButtonClick()
+
         }
 
     }
+
+
 
     private fun handleSubmitButtonClick() {
         if (tileUri == null) {
@@ -68,7 +71,7 @@ class AddtileActivity : AppCompatActivity() {
             Toast.makeText(this, "No tile/image selected", Toast.LENGTH_LONG).show()
             return
         }
-        if (etNum.text.isBlank() || etCode.text.isBlank() || etId.text.isBlank() || etValue.text.isBlank()) {
+        if (etNum.text.isBlank() || etId.text.isBlank() || etValue.text.isBlank()) {
             Log.i(TAG, "Fields cannot be empty")
             Toast.makeText(this, "Fields cannot be empty", Toast.LENGTH_LONG).show()
             return
@@ -80,9 +83,10 @@ class AddtileActivity : AppCompatActivity() {
         }
         //>>>>>>> Building tile(+data/info), store in firebase and return tile-build to (p.)Base
 
+
         btnSubmit.isEnabled = false
         val tileUploadUri = tileUri as Uri
-        val photoReference = storageReference.child("images/${System.currentTimeMillis()}-photo.jpg")
+        val photoReference = storageReference.child("erseve/${System.currentTimeMillis()}-photo.jpg")
 
         // Upload photo to Firebase storage
 
@@ -105,24 +109,30 @@ class AddtileActivity : AppCompatActivity() {
                     etCode.text.toString(),
                     etValue.text.toString().toInt(),
                     etNum.text.toString().toInt(),
+                    etColor.text.toString(),
                     signInNick)
                 firebaseDb.collection("tils").add(post)
             }.addOnCompleteListener { postCreatoinTask ->
                 btnSubmit.isEnabled = true
                 if (!postCreatoinTask.isSuccessful) {
-                    Log.e(TAG, "Exception during Firebase operations", postCreatoinTask.exception)
-                    Toast.makeText(this, "Foto toevoegen mislukt", Toast.LENGTH_SHORT).show()
+                    Log.e(
+                        TAG,
+                        "Exception during Firebase operations",
+                        postCreatoinTask.exception
+                    )
+                    Toast.makeText(this, "Failure adding content", Toast.LENGTH_SHORT).show()
                 }
                 etId.text.clear()
                 ivImageUrli.setImageResource(0)
-                Toast.makeText(this, "Foto Toegevoegen OKE", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Content added", Toast.LENGTH_LONG).show()
                 val profileIntent = Intent(this, GameActivity::class.java)
                 profileIntent.putExtra(EXTRA_NICKNAME, signInNick?.nickname)
                 startActivity(profileIntent)
                 finish()
-        //>>>>>>>
+                //>>>>>>>
 
-            }
+
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

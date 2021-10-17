@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jufaja.jufajag_pro.colls.Pils
+import kotlinx.android.synthetic.main.activity_addtile.view.*
 import kotlinx.android.synthetic.main.item_jfj.view.*
 
 
@@ -33,6 +34,18 @@ class JFJAdapter (val context: Context, val kils: List<Pils>) :
             //itemView.txId.text = tils.id
             //itemView.txValue.text = tils.value.toString()
             //itemView.txNo.text = tils.number.toString()
+            if (tils.color == "amber")
+                itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.amber))
+            if (tils.color == "blue")
+                itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.blue))
+            if (tils.color == "red")
+                itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.red))
+            if (tils.color == "grey")
+                itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.grey))
+            if (tils.color == "green")
+                itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.green))
+            if (tils.color == "yelow")
+                itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.yelow))
             Glide.with(context).load(tils.imageUrl).into(itemView.btnImageJFJ)
 
         }

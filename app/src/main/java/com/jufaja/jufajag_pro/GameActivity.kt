@@ -60,8 +60,8 @@ open class GameActivity : AppCompatActivity() {
 
         var tilsReference = firebaseDb
             .collection("tils")
-            .limit(54)
-            .orderBy("number", Query.Direction.ASCENDING)
+            .limit(108)
+            .orderBy("value", Query.Direction.DESCENDING)
         //>>>>>>> FILTERING TILS-PROJECTS <<<<<<<
         val nickname = (intent.getStringExtra(EXTRA_NICKNAME))
         if (nickname != null) {

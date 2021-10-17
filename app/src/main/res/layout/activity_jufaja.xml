@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,12 +9,274 @@
     app:rowCount="4"
     tools:context=".JufajaActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvJFJ"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvJFJ"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnRB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:visibility="invisible"
+            app:backgroundTint="#19ADC7DD"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/btnJU"
+            app:layout_constraintEnd_toStartOf="@+id/btnJU"
+            app:srcCompat="@android:drawable/ic_dialog_dialer" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnJU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="9dp"
+            app:backgroundTint="#ADC7DD"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/btnFA"
+            app:layout_constraintEnd_toStartOf="@+id/btnFA"
+            app:srcCompat="@drawable/btn_ju002" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnFA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="9dp"
+            android:backgroundTint="#F74B85"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="@+id/btnJA"
+            app:layout_constraintEnd_toStartOf="@+id/btnJA"
+            app:srcCompat="@drawable/btn_fa001" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnJA"
+            android:layout_width="wrap_content"
+            android:layout_height="244dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#8091FB"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/btn_ja001" />
+
+        <TextView
+            android:id="@+id/tvWCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/coda"
+            android:hint="xx"
+            android:textAlignment="center"
+            android:textColor="#00FFF7"
+            android:textColorHint="#C9401D91"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWColor"
+            app:layout_constraintEnd_toStartOf="@+id/tvWColor"
+            app:layout_constraintTop_toTopOf="@+id/tvWColor"
+            tools:text="xx" />
+
+        <TextView
+            android:id="@+id/tvWColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coda"
+            android:hint="xx"
+            android:textAlignment="center"
+            android:textColor="#00FFF7"
+            android:textColorHint="#C9401D91"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvWImageU"
+            app:layout_constraintEnd_toEndOf="@+id/tvWImageU"
+            app:layout_constraintStart_toStartOf="@+id/tvWImageU"
+            tools:text="color" />
+
+        <TextView
+            android:id="@+id/tvWImageU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coda"
+            android:hint="aa-bb-cc-dd-ee-ff-gg-hh-ii-jj-kk-ll"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textColorHint="#C9401D91"
+            android:textSize="1sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvYColor"
+            app:layout_constraintEnd_toEndOf="@+id/tvYImageU"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvYImageU"
+            tools:text="xx-xx" />
+
+        <TextView
+            android:id="@+id/tvYCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/coda"
+            android:hint="xx"
+            android:textAlignment="center"
+            android:textColor="#FFDD00"
+            android:textColorHint="#C9401D91"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvYColor"
+            app:layout_constraintEnd_toStartOf="@+id/tvYColor"
+            app:layout_constraintTop_toTopOf="@+id/tvYColor"
+            tools:text="xx" />
+
+        <TextView
+            android:id="@+id/tvYColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coda"
+            android:hint="xx"
+            android:textAlignment="center"
+            android:textColor="#FFDD00"
+            android:textColorHint="#C9401D91"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvYImageU"
+            app:layout_constraintEnd_toEndOf="@+id/tvYImageU"
+            app:layout_constraintStart_toStartOf="@+id/tvYImageU"
+            tools:text="color" />
+
+        <TextView
+            android:id="@+id/tvYImageU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coda"
+            android:hint="aa-bb-cc-dd-ee-ff-gg-hh-ii-jj-kk-ll"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textColorHint="#C9401D91"
+            android:textSize="1sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvXColor"
+            app:layout_constraintEnd_toEndOf="@+id/tvXImageU"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvXImageU"
+            tools:text="xx-xx" />
+
+        <TextView
+            android:id="@+id/tvXCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/coda"
+            android:hint="xx"
+            android:textAlignment="center"
+            android:textColor="#FF6600"
+            android:textColorHint="#C9401D91"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvXColor"
+            app:layout_constraintEnd_toStartOf="@+id/tvXColor"
+            app:layout_constraintTop_toTopOf="@+id/tvXColor"
+            tools:text="xx" />
+
+        <TextView
+            android:id="@+id/tvXColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coda"
+            android:hint="xx"
+            android:textAlignment="center"
+            android:textColor="#FF6600"
+            android:textColorHint="#C9401D91"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvXImageU"
+            app:layout_constraintEnd_toEndOf="@+id/tvXImageU"
+            app:layout_constraintStart_toStartOf="@+id/tvXImageU"
+            tools:text="color" />
+
+        <TextView
+            android:id="@+id/tvXImageU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coda"
+            android:hint="aa-bb-cc-dd-ee-ff-gg-hh-ii-jj-kk-ll"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textColorHint="#C9401D91"
+            android:textSize="1sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvZColor"
+            app:layout_constraintEnd_toEndOf="@+id/tvZImageU"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvZImageU"
+            tools:text="xx-xx" />
+
+        <TextView
+            android:id="@+id/tvZCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/coda"
+            android:hint="xx"
+            android:textAlignment="center"
+            android:textColor="#B3FF00"
+            android:textColorHint="#C9401D91"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvZColor"
+            app:layout_constraintEnd_toStartOf="@+id/tvZColor"
+            app:layout_constraintTop_toTopOf="@+id/tvZColor"
+            tools:text="xx" />
+
+        <TextView
+            android:id="@+id/tvZColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coda"
+            android:hint="xx"
+            android:textAlignment="center"
+            android:textColor="#B3FF00"
+            android:textColorHint="#C9401D91"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvZImageU"
+            app:layout_constraintEnd_toEndOf="@+id/tvZImageU"
+            app:layout_constraintStart_toStartOf="@+id/tvZImageU"
+            tools:text="color" />
+
+        <TextView
+            android:id="@+id/tvZImageU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="170dp"
+            android:fontFamily="@font/coda"
+            android:hint="aa-bb-cc-dd-ee-ff-gg-hh-ii-jj-kk-ll"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textColorHint="#C9401D91"
+            android:textSize="1sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnJA"
+            app:layout_constraintEnd_toEndOf="@+id/rvJFJ"
+            tools:text="xx-xx" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

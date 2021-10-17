@@ -4,15 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/drawable/ic_construction.xml" value="0.17835051546391753" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/drawable/ic_kontrol.xml" value="0.1701388888888889" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/drawable/ic_launcher_background.xml" value="0.17835051546391753" />
-        <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/activity_addtile.xml" value="0.16944444444444445" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/activity_addtile.xml" value="0.184375" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/activity_base.xml" value="0.16944444444444445" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/activity_game.xml" value="0.16944444444444445" />
-        <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/activity_jufaja.xml" value="0.226953125" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/activity_jufaja.xml" value="0.8" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.18680555555555556" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/activity_profile.xml" value="0.16944444444444445" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/ietem_jfj.xml" value="0.16944444444444445" />
-        <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/item_jfj.xml" value="0.16944444444444445" />
+        <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/item_jfj.xml" value="0.72" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/item_tile.xml" value="0.16944444444444445" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/layout/item_tils.xml" value="0.4" />
         <entry key="..\:/01RBJFJ001/07Styeid/erseve09/MyApplication/app/src/main/res/menu/menu_addtile.xml" value="0.16944444444444445" />
