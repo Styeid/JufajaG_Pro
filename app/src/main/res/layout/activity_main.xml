@@ -7,6 +7,7 @@
     android:background="@drawable/backsplash007"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/tvHomeLogo1"
         android:layout_width="wrap_content"
@@ -52,14 +53,15 @@
         android:id="@+id/etNick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="60dp"
         android:ems="9"
         android:fontFamily="@font/bangers"
         android:hint="Enter your Nick-name"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        android:textColor="?attr/colorControlNormal"
-        android:textSize="30sp"
+        android:textColor="#E91E63"
+        android:textColorHint="#84FFFF"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/tvHomeLogo1"
         app:layout_constraintStart_toStartOf="@+id/tvHomeLogo1"
         app:layout_constraintTop_toTopOf="@+id/tvHomeLogo1" />

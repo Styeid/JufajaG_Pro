@@ -34,8 +34,8 @@ class JFJAdapter (val context: Context, val kils: List<Pils>) :
             //itemView.txId.text = tils.id
             //itemView.txValue.text = tils.value.toString()
             //itemView.txNo.text = tils.number.toString()
-            if (tils.color == "amber")
-                itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.amber))
+            if (tils.color == "amb")
+                itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.amb))
             if (tils.color == "blue")
                 itemView.tvImageJFJ.setTextColor(context.getResources().getColor(R.color.blue))
             if (tils.color == "red")

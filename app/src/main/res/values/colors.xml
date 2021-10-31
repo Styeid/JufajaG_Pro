@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="ToolBar">#5eadc7dd</color>
-    <color name="amber">#b4202a</color>
+    <color name="amb">#b4202a</color>
     <color name="blue">#285cc4</color>
     <color name="red">#73172d</color>
     <color name="grey">#8b93af</color>
